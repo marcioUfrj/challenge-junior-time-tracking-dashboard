@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
@@ -16,61 +22,102 @@
 </head>
 <body>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+  <main class="main-container">
+    <div class="dashboard-container">
+      <div class="menu-container">
+        <div class="bio-container">
+          <div class="bio-icon">
+            <img src="./images/image-jeremy.png" alt="bio-img" height="80px" width="80px">
+          </div>
+          <div class="bio-text">
+            <h1>
+              Report for
+              <span>Jeremy Robson</span>
+            </h1>
+          </div>
+        </div>
+        <div class="menu-dashboard-container">
+          <div class="menu-dashboard-item">Daily</div>
+          <div class="menu-dashboard-item">Weekly</div>
+          <div class="menu-dashboard-item">Monthly</div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Work</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">32hrs</div>
+              <div class="item-previous-hour">Last week - 36hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Play</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">10hrs</div>
+              <div class="item-previous-hour">Last week - 8hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Study</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">4hrs</div>
+              <div class="item-previous-hour">Last week - 7hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Exercise</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">4hrs</div>
+              <div class="item-previous-hour">Last week - 5hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Social</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">5hrs</div>
+              <div class="item-previous-hour">Last week - 10hrs</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-content">
+            <div class="item-header">
+              <div class="item-activity">Self Care</div>
+              <div class="item-icon-menu"></div>
+            </div>
+            <div class="item-body">
+              <div class="item-current-hour">2hrs</div>
+              <div class="item-previous-hour">Last week - 2hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
