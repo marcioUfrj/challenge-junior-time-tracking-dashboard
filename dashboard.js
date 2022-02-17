@@ -132,7 +132,7 @@ function setDashboardValues(timeframe) {
     let [currentHour, previousHour] = getActivityHours(activity, timeframe);
     
     elemGridItems[j].getElementsByClassName('item-current-hour')[0].innerText = ''.concat(currentHour, 'hrs');
-    elemGridItems[j].getElementsByClassName('item-previous-hour')[0].innerText = ''.concat(previousHour, 'hrs');
+    elemGridItems[j].getElementsByClassName('item-previous-hour')[0].innerText = ''.concat(getTimeframeText(timeframe), previousHour, 'hrs');
   }
 
   return true;
@@ -144,4 +144,13 @@ function getActivityHours (title, timeframe) {
   });
 
   return [dataFilter[0].timeframes[timeframe].current, dataFilter[0].timeframes[timeframe].previous]
+}
+
+function getTimeframeText(timeframe) {
+  let text;
+  if (timeframe == 'daily') { text = 'Last day - '};
+  if (timeframe == 'weekly') { text = 'Last week - '};
+  if (timeframe == 'monthly') { text = 'Last month - '};
+
+  return text;
 }

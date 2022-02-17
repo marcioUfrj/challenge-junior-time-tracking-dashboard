@@ -194,3 +194,100 @@ h1 {
   font-weight: var(--font-weight-light);
   color: var(--neutral-pale-blue);
 }
+
+@media screen and (max-width: 440px) {
+  body {
+    min-width: 375px;
+    min-height: 1500px;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+  }
+  
+  .h1-bold {
+    font-size: 24px;
+  }
+  
+  .main-container {
+    --width-main-container-mobile: 375px;
+    --height-main-container-mobile: 1469px;
+  
+    height: var( --height-main-container-mobile);
+    max-width: var(--width-main-container-mobile);
+    max-height: var(--height-main-container-mobile);
+  }
+  
+  .dashboard-container {
+    --width-dashboard-container-mobile: 327px;
+    --height-dashboard-container-mobile: 1308px;
+  
+    width: var(--width-dashboard-container-mobile);
+    height: var(--height-dashboard-container-mobile);
+    
+    flex-direction: column;
+  }
+  
+  /*** MENU CONTAINER*/
+  .menu-container {
+    --height-menu-container-mobile: 203px;
+    --padding-vertical-menu-container: 32px;
+    --height-bio-container-mobile: 133px;
+    
+    width: 100%;
+    height: var(--height-menu-container-mobile);
+  }
+  
+  .bio-container {
+    
+    width: 100%;
+    height: var(--height-bio-container-mobile);
+    padding: calc(var(--padding-vertical-menu-container) - 2.5px) 28px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  .menu-dashboard-container {
+    height: calc(100% - var(--height-bio-container-mobile));
+    padding: 0 32px;
+  
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+  /*** GRID */
+  .grid-container {
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 160px);
+    gap: 24px;
+  }
+  
+  .grid-item {
+    background-position: 235px -10px;
+  }
+  
+  .grid-item-content {
+    width: 100%;
+    height: 122px;
+    padding: 30px 24px;
+  }
+  
+  /******* ITEM BODY **/
+  .item-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item-current-hour {
+    font-size: 30px;
+    line-height: 1;
+  }
+}
