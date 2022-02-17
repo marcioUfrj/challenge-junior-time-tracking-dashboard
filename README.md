@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Fronted Mentor Challenge](https://your-solution-url.com)
+- Solution URL: [Fronted Mentor Challenge](https://www.frontendmentor.io/solutions/time-tracking-dashboard-html-css-javascript-il2sy-Ea6)
 - Live Site URL: [Git Pages](https://marcioufrj.github.io/challenge-junior-time-tracking-dashboard/)
 
 ## My process
