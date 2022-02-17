@@ -108,6 +108,7 @@ const array_data = [
   }
 ];
 
+/* setting each DASHBOARD MENU ITEM */
 for (var i = 0; i < elemMenuDashboardItems.length; i++) {
   elemMenuDashboardItems[i].addEventListener('click', function() {
     var current = document.getElementsByClassName('menu-dashboard-item active');
@@ -117,10 +118,46 @@ for (var i = 0; i < elemMenuDashboardItems.length; i++) {
     setDashboardValues(this.innerText.toLowerCase());
   })
 }
-/* set inicial values */
+
+/* set inicial values for each DASHBOARD card */
 setDashboardValues(elemMenuDashboardItems[0].innerText.toLowerCase());
 
+/* setting each ELLIPSIS ICON */
+for (var j = 0; j < elemGridItems.length; j++) {
+
+  /* add class onHover for each 'gri-item-content', so we can find it with 'item-icon-menu' */
+  elemGridItems[j].addEventListener('mouseenter', function() {
+    this.classList.add('onHover');
+  })
+  elemGridItems[j].addEventListener('mouseleave', function() {
+    this.classList.remove('onHover');
+  })
+
+  // select menu icon element
+  let elemIconMenu = elemGridItems[j].getElementsByClassName('item-icon-menu');
+  elemIconMenu[0].addEventListener('mouseenter', function() {
+      let elemItemContentOnHover = document.getElementsByClassName('grid-item-content onHover');
+      disableHover(elemItemContentOnHover[0]);
+    }
+  );
+
+  elemIconMenu[0].addEventListener('mouseleave', function() {
+      let elemItemContentOnHover = document.getElementsByClassName('grid-item-content onHover no-hover');
+      enableHover(elemItemContentOnHover[0]);
+    }
+  );
+}
+
+
 /**************************************************************************************************/
+// hover effect
+function disableHover(elemItemContentOnHover) {
+  elemItemContentOnHover.classList.add('no-hover');
+}
+function enableHover(elemItemContentOnHover) {
+  elemItemContentOnHover.classList.remove('no-hover');
+}
+
 /** update each item in the dashboard with corresponding info */
 function setDashboardValues(timeframe) {
   if (timeframe.trim() == '' || timeframe == null) {

@@ -16,6 +16,7 @@
 
   --neutral-very-dark-blue: hsl(226, 43%, 10%);
   --neutral-dark-blue: hsl(235, 46%, 20%);
+  --neutral-soft-dark-blue: hsl(235, 46%, 40%); /* hover state */
   --neutral-desaturated-blue: hsl(235, 45%, 61%);
   --neutral-pale-blue: hsl(236, 100%, 87%);
 
@@ -170,6 +171,11 @@ h1 {
   justify-content: space-between;
 }
 
+.grid-item-content:not(.no-hover):hover {
+  cursor: pointer;
+  background-color: var(--neutral-soft-dark-blue);
+}
+
 /******* ITEM HEADER **/
 .item-header {
   display: flex;
@@ -279,7 +285,6 @@ h1 {
     height: 122px;
     padding: 30px 24px;
   }
-  
   /******* ITEM BODY **/
   .item-body {
     display: flex;
