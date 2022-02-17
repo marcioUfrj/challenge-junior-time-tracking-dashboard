@@ -108,7 +108,7 @@ const array_data = [
   }
 ];
 
-/* setting each DASHBOARD MENU ITEM */
+/* setting each DASHBOARD MENU ITEM event listener */
 for (var i = 0; i < elemMenuDashboardItems.length; i++) {
   elemMenuDashboardItems[i].addEventListener('click', function() {
     var current = document.getElementsByClassName('menu-dashboard-item active');

@@ -12,9 +12,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -28,11 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/desktop-version.JPG)
+![](./screenshots/mobile-version.JPG)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Fronted Mentor Challenge](https://your-solution-url.com)
 - Live Site URL: [Git Pages](https://marcioufrj.github.io/challenge-junior-time-tracking-dashboard/)
 
 ## My process
@@ -47,34 +46,24 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+/* setting each DASHBOARD MENU ITEM event listener */
+for (var i = 0; i < elemMenuDashboardItems.length; i++) {
+  elemMenuDashboardItems[i].addEventListener('click', function() {
+    var current = document.getElementsByClassName('menu-dashboard-item active');
+    current[0].className = current[0].className.replace(' active', '');
+    this.className += ' active';
+
+    setDashboardValues(this.innerText.toLowerCase());
+  })
 }
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+This was a big challenge to my JavaScript skills. I had to research a lot in order to make the effects and dynamically change the dashboard values.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@marcioUfrj](https://www.frontendmentor.io/profile/marcioUfrj)
+- Twitter - [@tsukimi_23](https://www.twitter.com/tsukimi_23)
