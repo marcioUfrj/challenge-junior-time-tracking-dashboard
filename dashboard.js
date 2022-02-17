@@ -114,15 +114,28 @@ for (var i = 0; i < elemMenuDashboardItems.length; i++) {
     current[0].className = current[0].className.replace(' active', '');
     this.className += ' active';
 
-    for (var j = 0; j < elemGridItems.length; j++) {
-      let timeframe = this.innerText.toLowerCase();
-      let activity = elemGridItems[j].getElementsByClassName('item-activity')[0].innerText;
-      let [currentHour, previousHour] = getActivityHours(activity, timeframe);
-      
-      elemGridItems[j].getElementsByClassName('item-current-hour')[0].innerText = ''.concat(currentHour, 'hrs');
-      elemGridItems[j].getElementsByClassName('item-previous-hour')[0].innerText = ''.concat(previousHour, 'hrs');
-    }
+    setDashboardValues(this.innerText.toLowerCase());
   })
+}
+/* set inicial values */
+setDashboardValues(elemMenuDashboardItems[0].innerText.toLowerCase());
+
+/**************************************************************************************************/
+/** update each item in the dashboard with corresponding info */
+function setDashboardValues(timeframe) {
+  if (timeframe.trim() == '' || timeframe == null) {
+    return false;
+  }
+
+  for (var j = 0; j < elemGridItems.length; j++) {
+    let activity = elemGridItems[j].getElementsByClassName('item-activity')[0].innerText;
+    let [currentHour, previousHour] = getActivityHours(activity, timeframe);
+    
+    elemGridItems[j].getElementsByClassName('item-current-hour')[0].innerText = ''.concat(currentHour, 'hrs');
+    elemGridItems[j].getElementsByClassName('item-previous-hour')[0].innerText = ''.concat(previousHour, 'hrs');
+  }
+
+  return true;
 }
 
 function getActivityHours (title, timeframe) {
