@@ -36,6 +36,11 @@ Users should be able to:
 
 ## My process
 
+1. I finished the desktop layout
+2. I finished javascript code to switch between stats
+3. I finished the mobile version
+4. I finished the hover effects with javascript
+
 ### Built with
 
 - Semantic HTML5 markup
